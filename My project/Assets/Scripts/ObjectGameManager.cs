@@ -47,7 +47,7 @@ public class ObjectGameManager : MonoBehaviour
         if (currentObjectIndex < objectsToSpawn.Count)
         {
             // Select the object based on the current index
-            currentObject = Instantiate(objectsToSpawn[currentObjectIndex], new Vector3(0, 0.65f, 0.5f), Quaternion.identity);
+            currentObject = Instantiate(objectsToSpawn[currentObjectIndex], new Vector3(0, 0.8f, 0.4f), Quaternion.identity);
 
             // Start the timer for this object
             timer = objectLifeTime;
