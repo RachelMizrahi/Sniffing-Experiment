@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ObjectCollision : MonoBehaviour
 {
-    public AudioSource correctSound;  // יוזן מבחוץ
+    public AudioSource correctSound;  
 
     private void OnTriggerEnter(Collider other)
     {
