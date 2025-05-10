@@ -95,6 +95,36 @@ public class ObjectGameManager : MonoBehaviour
             answer1Text.text = "LIGHT";
             answer2Text.text = "HEAVY";
         }
+
+        if (objectCounter / 12 == 2)
+        {
+            answer1Text.text = "NATURAL";
+            answer2Text.text = "ARTIFICIAL";
+        }
+
+        if (objectCounter / 12 == 3)
+        {
+            answer1Text.text = "HARD";
+            answer2Text.text = "SOFT";
+        }
+
+        if (objectCounter / 12 == 4)
+        {
+            answer1Text.text = "SMALL";
+            answer2Text.text = "LARGE";
+        }
+
+        if (objectCounter / 12 == 5)
+        {
+            answer1Text.text = "CHEAP";
+            answer2Text.text = "EXPENSIVE";
+        }
+
+        if (objectCounter / 12 == 6)
+        {
+            answer1Text.text = "INEDIBLE";
+            answer2Text.text = "EDIBLE";
+        }
     }
 
 }
