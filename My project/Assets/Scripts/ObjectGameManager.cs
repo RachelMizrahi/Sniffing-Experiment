@@ -12,8 +12,8 @@ public class ObjectGameManager : MonoBehaviour
     public TMP_Text timerText;                   // Text to display the timer
     public TMP_Text answer1Text;            // Answer1 text
     public TMP_Text answer2Text;            // Answer2 text
-    public float objectLifeTime = 10f;       // Time before the object disappears
-    public float waitTimeBetweenObjects = 10f; // Time to wait before the next object appears
+    public float objectLifeTime = 7f;       // Time before the object disappears
+    public float waitTimeBetweenObjects = 7f; // Time to wait before the next object appears
     private float timer;                     // Timer for counting down the object life time
     private bool isTimerRunning = false;     // Flag to check if the timer is running
     private int currentObjectIndex = 0;     // Index to track the current object
