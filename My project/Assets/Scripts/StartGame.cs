@@ -3,11 +3,18 @@ using UnityEngine.SceneManagement;
 
 public class StartGame : MonoBehaviour
 {
-    public GameObject startPanel; // The opening screen panel
+    public GameObject startScreenCanvas;
+    public GameObject gameContent;
 
-    public void OnStartButtonClicked()
+    void Start()
     {
-        startPanel.SetActive(false); // Hides the opening screen
-        // Here you can trigger other functions that start the game
+        startScreenCanvas.SetActive(true);
+        gameContent.SetActive(false);
+    }
+
+    public void onStartButtonClicked()
+    {
+        startScreenCanvas.SetActive(false);
+        gameContent.SetActive(true);
     }
 }

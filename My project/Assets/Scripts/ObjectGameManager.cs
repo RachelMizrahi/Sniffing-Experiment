@@ -9,9 +9,11 @@ public class ObjectGameManager : MonoBehaviour
     public List<GameObject> objectsToSpawn;  // List of objects to spawn
     public GameObject currentObject;         // The current object being held by the player
     public AudioSource correctSound;         // Audio to play when any answer is touched
+    public TMP_Text questionText;
     public TMP_Text timerText;                   // Text to display the timer
     public TMP_Text answer1Text;            // Answer1 text
     public TMP_Text answer2Text;            // Answer2 text
+    public TMP_Text endGameText;
     public float objectLifeTime = 10f;       // Time before the object disappears
     public float waitTimeBetweenObjects = 10f; // Time to wait before the next object appears
     private float timer;                     // Timer for counting down the object life time
@@ -67,8 +69,8 @@ public class ObjectGameManager : MonoBehaviour
         }
         else
         {
-            // Stop the game or show a message
-            Debug.Log("All objects displayed, ending the game.");
+            // show a message of end game
+            EndGame();
         }
     }
     // Function to remove the current object (when time is up)
@@ -125,6 +127,18 @@ public class ObjectGameManager : MonoBehaviour
             answer1Text.text = "INEDIBLE";
             answer2Text.text = "EDIBLE";
         }
+    }
+
+    private void EndGame()
+    {
+        isTimerRunning = false;
+        answer1Text.gameObject.SetActive(false);
+        answer2Text.gameObject.SetActive(false);
+        questionText.gameObject.SetActive(false);
+
+        endGameText.gameObject.SetActive(true);
+
+        timerText.text = "";
     }
 
 }
