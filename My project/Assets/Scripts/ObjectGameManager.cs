@@ -127,6 +127,12 @@ public class ObjectGameManager : MonoBehaviour
             answer1Text.text = "INEDIBLE";
             answer2Text.text = "EDIBLE";
         }
+
+        if (objectCounter / 12 == 7)
+        {
+            answer1Text.text = "INEDIBLE";
+            answer2Text.text = "EDIBLE";
+        }
     }
 
     private void EndGame()
