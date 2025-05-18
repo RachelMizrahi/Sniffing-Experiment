@@ -23,7 +23,8 @@ public class ObjectGameManager : MonoBehaviour
 
     private void Start()
     {
-        StartNewObject(); // Start the first object
+        timerText.text = "Press A to Start";
+        //StartNewObject(); // Start the first object
     }
 
     private void Update()
@@ -42,6 +43,13 @@ public class ObjectGameManager : MonoBehaviour
             }
         }
     }
+
+    public void startExperiment()
+    {
+        timerText.text = ""; 
+        StartNewObject();
+    }
+
     // Function to start the game with a new object
     private void StartNewObject()
     {
