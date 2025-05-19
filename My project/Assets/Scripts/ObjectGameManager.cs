@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Meta.XR.BuildingBlocks;
 
 public class ObjectGameManager : MonoBehaviour
 {
@@ -20,11 +21,12 @@ public class ObjectGameManager : MonoBehaviour
     private bool isTimerRunning = false;     // Flag to check if the timer is running
     private int currentObjectIndex = 0;     // Index to track the current object
     private int objectCounter = 0;       // Counter to track the number of displayed objects
+    public ControllerButtonsMapper buttonsMapper; // Reference to Meta's Controller Buttons Mapper
 
     private void Start()
     {
         timerText.text = "Press A to Start";
-        //StartNewObject(); // Start the first object
+      //  StartNewObject(); // Start the first object
     }
 
     private void Update()
@@ -46,8 +48,18 @@ public class ObjectGameManager : MonoBehaviour
 
     public void startExperiment()
     {
-        timerText.text = ""; 
+        timerText.text = "";
         StartNewObject();
+
+        // Disable the "Start" button after first press
+        for (int i = buttonsMapper.ButtonClickActions.Count - 1; i >= 0; i--)
+        {
+            var action = buttonsMapper.ButtonClickActions[i];
+            if (action.Title == "Start Experiment") // Or whatever you named it
+            {
+                buttonsMapper.ButtonClickActions.RemoveAt(i); // Remove it
+            }
+        }
     }
 
     // Function to start the game with a new object

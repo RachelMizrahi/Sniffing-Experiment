@@ -38,6 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -56913,7 +56914,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _buttonClickActions:
-  - Title: 
+  - Title: Start Experiment
     Button: 1
     ButtonMode: 0
     InputActionReference: {fileID: 0}
@@ -66094,6 +66095,7 @@ MonoBehaviour:
   endGameText: {fileID: 1875556871}
   objectLifeTime: 7
   waitTimeBetweenObjects: 7
+  buttonsMapper: {fileID: 1740866695}
 --- !u!4 &1996137645
 Transform:
   m_ObjectHideFlags: 0
